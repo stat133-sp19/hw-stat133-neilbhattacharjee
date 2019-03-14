@@ -8,6 +8,8 @@ Private Repository for HW assignments of Stat 133 (Spring 2019)
 - Lab section: 104
 - GSI: 
 
+
+BLA BLA BLA 
 -----
 
 ## Assignments

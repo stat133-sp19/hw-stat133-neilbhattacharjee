@@ -1,0 +1,21 @@
+---
+title: "Report"
+output: github_document
+---
+
+
+
+
+```{r}
+library(dplyr)
+
+arrange(summarise(group_by(tables, name), 
+                  total = sum(shot_type == "2PT Field Goal"), made = sum(shot_made_flag == "shot_yes" & shot_type == "2PT Field Goal"), percentage = made/total), desc(percentage))
+arrange(summarise(group_by(tables, name), 
+                  total = sum(shot_type == "3PT Field Goal"), made = sum(shot_made_flag == "shot_yes" & shot_type == "3PT Field Goal"), percentage = made/total), desc(percentage))
+arrange(summarise(group_by(tables, name), 
+                  total = sum(shot_type == "2PT Field Goal" | shot_type == "3PT Field Goal"), made = sum(shot_made_flag == "shot_yes"), percentage = made/total), desc(percentage))
+
+
+
+```
